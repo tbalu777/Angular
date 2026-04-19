@@ -1,1 +1,6 @@
 ng new projectname - új projekt létrehozása
+ng build: kisebb verzió létrehozása
+
+/src/app/app.html: fő html
+
+ng s -o: elindítja az appot és megnyitja a böngészőt
