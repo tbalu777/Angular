@@ -8,10 +8,15 @@ import { Counter } from '../../services/counter';
   styleUrl: './left-counter.css',
 })
 export class LeftCounter {
-  counter: number = 0;
+  leftCounter: number = 0;
 
   constructor(private counterService: Counter) {
-    this.counter = this.counterService.counter;
+    this.leftCounter = this.counterService.counter;
+  }
+
+  addOneToCounter(): void {
+    this.counterService.addCounter();
+    this.leftCounter = this.counterService.counter;  
   }
 
 
