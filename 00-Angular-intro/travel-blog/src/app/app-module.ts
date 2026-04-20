@@ -4,9 +4,10 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Menu } from './menu/menu';
+import { Card } from './card/card';
 
 @NgModule({
-  declarations: [App, Menu],
+  declarations: [App, Menu, Card],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners(), provideClientHydration(withEventReplay())],
   bootstrap: [App],
