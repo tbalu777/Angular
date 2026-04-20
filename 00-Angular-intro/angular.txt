@@ -4,3 +4,11 @@ ng build: kisebb verzió létrehozása
 /src/app/app.html: fő html
 
 ng s -o: elindítja az appot és megnyitja a böngészőt
+
+ng g c: komponens létrehozása
+
+app.html-be beirni <app-komponens neve></app-komponens neve>
+
+komponensen belul komponens neve.html
+
+tagen belül *ngFor = for ciklus angularban
