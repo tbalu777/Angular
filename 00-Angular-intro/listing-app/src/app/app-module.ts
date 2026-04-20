@@ -3,10 +3,10 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { ListingAppComponent } from './components/listing-app.component/listing-app.component';
+import { ListingApp } from './components/listing-app/listing-app';
 
 @NgModule({
-  declarations: [App, ListingAppComponent],
+  declarations: [App, ListingApp],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners(), provideClientHydration(withEventReplay())],
   bootstrap: [App],

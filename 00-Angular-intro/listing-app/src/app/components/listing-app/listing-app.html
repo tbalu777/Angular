@@ -1,0 +1,46 @@
+<div class="text-center container">
+
+    <table class="mt-t table">
+        <thead>
+            <tr>
+                <th class="p-5">#</th>
+                <th class="p-5">First Name</th>
+                <th class="p-5">Last Name</th>
+                <th class="p-5">E-mail</th>
+                <th class="p-5">Expiration Date</th>
+                <th class="p-5">Salary</th>
+                <th class="p-5">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let user of userList; index as i"
+            [ngClass]="{'table-success': i % 2 === 1}">
+
+            <ng-container *ngIf="user.deletedUser === false">
+
+                <th class="p-2">{{user.id}}</th>
+                <th class="p-2">{{user.firstName}}</th>
+                <th class="p-2">{{user.lastName}}</th>
+                <th class="p-2">{{user.email}}</th>
+                <th class="p-2">{{user.expDate | date: "yyyy-MM-dd"}}</th>
+                <th class="p-2">{{user.salary | currency:'USD'}}</th>
+                <th class="p-2">
+                    <button class="btn btn-md btn-primary">Edit</button>
+                    <button class="btn btn-md btn-danger" (click)="deleteUser(user)">Delete</button>
+                </th>
+
+            </ng-container>
+
+
+        </tr>
+
+        </tbody>
+    </table>
+
+    <button class="btn btn-md btn-warning mt-3" (click)="resetTable()">Reset Table</button>
+    <button class="btn btn-md btn-primary mt-3" (click)="getEven()">Show Even Users</button>
+    <button class="btn btn-md btn-success mt-3" (click)="getOdd()">Show Odd Users</button>
+
+</div>
