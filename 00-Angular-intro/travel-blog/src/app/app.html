@@ -6,3 +6,44 @@
     <app-card></app-card>
     <app-card></app-card>
 </main>
+
+<p *ngFor="let number of numbers
+    let i = index
+    let first = first
+    let last = last
+    let odd = odd
+    let even = even
+    "> 
+    <span *ngIf = "even">
+        {{ i }}. {{ number }} {{ even }}
+    </span>
+</p>
+
+<!-- <div *ngFor="let user of users; let last = last;">
+    <p>
+        {{ user.name }}
+        <span *ngIf="user.isActive">
+            (Belépve)
+        </span>
+    </p>
+    <span>{{ user.age }}</span>
+    <div *ngIf="last">Vége</div>
+    <span *ngIf="user.age % 2 == 0">Páros</span>
+</div> -->
+
+<div *ngIf="!users else userData"> // Ha nincs users, akkor loading, egyébként userData
+    loading...
+</div>
+
+<ng-template #userData>
+    <div *ngFor="let user of users" style="display: flex;">
+        <span [ngStyle]="{
+            'font-size': user.age + 'px',
+            'font-weight': (user.age > 30) ? 'bold' : 'normal',
+        }">{{ user.name }}</span>
+        <div class="circle" [ngClass]="{'active': user.isActive, 'inactive': !user.isActive}"></div>
+        <div>
+            {{ user.age }}
+        </div>
+    </div>
+</ng-template>
