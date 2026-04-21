@@ -1,1 +1,23 @@
-<p>item-list works!</p>
+<div class="container">
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Fruit</th>
+                <th>Price</th>
+                <th>Details</th>
+                <th>Details-link</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let fruit of fruitList; index as i">
+                <th>{{ i + 1 }}</th>
+                <td>{{ fruit.name }}</td>
+                <td>{{ fruit.price }}</td>
+                <td><button class="btn btn-info" (click)="goToItemDetail(i)">Details</button></td>
+                <td><a [routerLink]="['items', i]" class="btn btn-primary">Details-link</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
