@@ -31,3 +31,23 @@ models
 services
 
 npm i bootstrap: bootstrap telepítése az angular appba
+
+observable: adatfolyam figyelése, ha az egyikben változik, a másik is változik?
+obsPigs$: Observable<PeppaInterface[]> = of(this.allPeppas);
+  getPeppaPigs(): Observable<PeppaInterface[]> {
+    return this.obsPigs$;
+  }
+
+Routing:
+app-routing-module.ts-
+
+Bootstrap behúzás:
+npm i bootstrap
+angular.json 
+"styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
