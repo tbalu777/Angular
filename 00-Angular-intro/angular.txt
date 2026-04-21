@@ -6,9 +6,28 @@ ng build: kisebb verzió létrehozása
 ng s -o: elindítja az appot és megnyitja a böngészőt
 
 ng g c: komponens létrehozása
+ng g s: service létrehozása
 
 app.html-be beirni <app-komponens neve></app-komponens neve>
 
 komponensen belul komponens neve.html
 
 tagen belül *ngFor = for ciklus angularban
+*ngIf = feltétel
+
+Egy tagen belül vagy csak az egyik, vagy csak a másik lehet
+
+elemek kiíratása {{változó neve}}
+
+ng-template: csak egy sablon, nem egyből jelenik meg, csak ha valami feltétel teljesül (lást *ngif)
+
+[ng-Style]: feltételeket lehet szabni egy gey stílushoz, mikor legyen olyan stílus
+[ng-Class]: classokra tudok feltételeket adni
+
+ngOninit: egyből lefut ahogy betöltődik?
+
+components
+models
+services
+
+npm i bootstrap: bootstrap telepítése az angular appba
